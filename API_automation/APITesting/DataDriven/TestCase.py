@@ -14,9 +14,7 @@ def test_add_multiple_student():
     row = obj.fetch_row_count()
     keyList = obj.fetch_key_names()
     
-    
-    
-    
+    #Updating objects and creating resources     
     for i in range(2, row+1):
         updated_json_request = obj.update_request_with_data(i, json_request, keyList)
         response = requests.post(url,updated_json_request)
